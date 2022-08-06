@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-"""
-unittest test file for the base_mode class
-"""
+"""unittest test file for the base_mode class"""
+
 
 from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
@@ -10,8 +9,10 @@ import json
 import os
 import unittest
 
+
 class TestClass(unittest.TestCase):
     """Test case for basemodel"""
+
     def setUp(self):
         self.model = BaseModel()
         return super().setUp()
@@ -37,8 +38,7 @@ class TestClass(unittest.TestCase):
             data = json.loads(file_string)
 
         self.assertTrue(
-                '{}.{}'.format(type(self.model).__name__, self.model.id) in data
-            )
+            '{}.{}'.format(type(self.model).__name__, self.model.id) in data)
 
         self.assertDictEqual(
             self.model.to_dict(),
