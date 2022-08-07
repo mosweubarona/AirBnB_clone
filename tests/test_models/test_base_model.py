@@ -1,13 +1,12 @@
 #!/usr/bin/python3
 """unittest test file for the base_mode class"""
 
-
+import unittest
 from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
 import models
 import json
 import os
-import unittest
 
 
 class TestClass(unittest.TestCase):
